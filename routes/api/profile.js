@@ -3,6 +3,9 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
 
+// Load Validation
+const validateProfileInput = require('../../validation/profile')
+
 // Load Profile Model
 const Profile = require('../../models/Profile');
 
@@ -25,6 +28,7 @@ router.get('/', passport.authenticate('jwt', {session: false}), (req, res) => {
 
 
     Profile.findOne({ user: req.user.id })
+        .populate('user', ['name', 'avatar'])
         .then(profile => {
             if(!profile){
                 errors.noprofile = 'There is no profile for this user'
@@ -48,10 +52,18 @@ router.get('/test', (req, res) => {
 // @route     POST api/profile
 // @desc      Create or Edit user profile
 // @access    Private
-router.post(
-    '/', 
-    passport.authenticate('jwt', {session: false}), 
-    (req, res) => {
+router.post( '/', passport.authenticate('jwt', {session: false}), (req, res) => {
+
+        const  { errors, isValid } = validateProfileInput(req.body);
+
+       
+        // Check Validation
+        if(!isValid){
+            
+            // Return any errors with 400 status
+            return res.status(400).json(errors);
+        }
+
         // Get Fields
         const profileFields = {};
         profileFields.user = req.user.id;
@@ -75,8 +87,8 @@ router.post(
         if(req.body.instagram) profileFields.social.instagram = req.body.instagram;
         if(req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
 
-        Profile.findOne({ user: req.body.id })
-            .then(profile => {
+        Profile.findOne({ user: req.user.id })
+            .then( profile => {
                 if(profile){
                 //Update
                 Profile.findOneAndUpdate(
@@ -93,14 +105,13 @@ router.post(
                 Profile.findOne({handle: profileFields.handle})
                     .then((profile) => {
                         if(profile) {
+                           
                             errors.handle = 'That handle already exists';
                             res.status(400).json(errors)
                         }
                     // Save Profile
                     new Profile(profileFields).save()
-                        .then(profile => {
-                            res.json(profile);
-                        })
+                        .then(profile => { res.json(profile) })
                     
                     })
                }
