@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
             res.json(posts)
         })
         .catch(err => res.status(404).json({nopostsfound: 'No posts found'}))
-})
+});
 
 // @route     GET api/posts/:id
 // @desc      Get post by id
@@ -37,7 +37,7 @@ router.get('/:id', (req, res) => {
             res.json(post)
         })
         .catch(err => res.status(404).json({nopostfound: 'No post found with that ID'}))
-})
+});
 
 
 
@@ -51,8 +51,8 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
     // Check Validation
     if(!isValid){
         // if any errors send 400 with errors object
-        return res.status(400).json(errors)
-    }
+        return res.status(400).json(errors);
+    };
 
     const newPost = new Post({
         text: req.body.text,
@@ -62,13 +62,14 @@ router.post('/', passport.authenticate('jwt', {session: false}), (req, res) => {
 
     });
     newPost.save().then(post => res.json(post));
-})
+});
 
 // @route     DELETE api/posts/:id
 // @desc      Delete post by id
 // @access    Private
 router.delete('/:id', passport.authenticate('jwt',  {session: false}), (req, res) => {
     Profile.findOne({user: req.user.id})
+        .then(profile => {
             Post.findById(req.params.id)
                 .then(post => {
                     if(post.user.toString() !== req.user.id){
@@ -80,6 +81,32 @@ router.delete('/:id', passport.authenticate('jwt',  {session: false}), (req, res
                 })
                 .catch(err => {
                     res.status(404).json({ postnotfound: 'No post found' });
+                });
+        });
+});
+
+// @route     POST api/posts/like/:id
+// @desc      Like a post
+// @access    Private
+router.post('/like/:id', passport.authenticate('jwt',  {session: false}), (req, res) => {
+    Profile.findOne({user: req.user.id})
+        .then(profile => {
+            Post.findById(req.params.id)
+                .then(post => {
+                    
+                    if(post.likes.filter(like => like.user.toString() === req.user.id).length > 0 ){
+                        return res.status(400).json({ alreadyliked: 'User already liked this post'})
+                    }
+
+                    // Add user id to 
+                    post.like.unshift({user: req.user.id });
+
+                    post.save().then(post => res.json(post));
+
+                })
+                .catch(err => {
+                    res.status(404).json({ postnotfound: 'No post found' });
+                })
         })
 })
 
