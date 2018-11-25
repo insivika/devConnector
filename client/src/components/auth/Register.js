@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom';
-import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup'
@@ -62,7 +61,7 @@ class Register extends Component {
                 <h1 className="display-4 text-center">Sign Up</h1>
                 <p className="lead text-center">Create your DevConnector account</p>
                 <form noValidate onSubmit={this.onSubmit}>
-                
+
                     <TextFieldGroup
                         placeholder="Name"
                         name="name"
