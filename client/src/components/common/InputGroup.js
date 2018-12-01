@@ -7,8 +7,6 @@ const InputGroup = ({
   placeholder,
   value,
   error,
-  info,
-  type,
   icon,
   onChange,
 }) => {
