@@ -131,7 +131,6 @@ router.post('/unlike/:id', passport.authenticate('jwt',  {session: false}),
                         return res.status(400).json({ notliked: 'You have not yet liked this post'})
                     }
 
-
                     // Add user id to 
                     const removeIndex = post.likes.map(item => item.user.toString()).indexOf(req.user.id);
 

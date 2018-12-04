@@ -129,6 +129,8 @@ router.post( '/', passport.authenticate('jwt', {session: false}), (req, res) => 
             return res.status(400).json(errors);
         }
 
+        
+
         // Get Fields
         const profileFields = {};
         profileFields.user = req.user.id;
