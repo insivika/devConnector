@@ -13,7 +13,7 @@ class AddExperience extends Component {
     company: '',
     title: '',
     location: '',
-    form: '',
+    from: '',
     to: '',
     current: false,
     description: '',
@@ -74,7 +74,7 @@ class AddExperience extends Component {
             <Link to="/dashboard" className="btn btn-ligh">
               Go Back
             </Link>
-            <h1 className="display-4 text-center">Add Experience</h1>
+            <h1 className="display-4 text-center">Add Your Experience</h1>
             <p className="lead text-center">
               Add any job or position that you have had in the past or current.
             </p>
