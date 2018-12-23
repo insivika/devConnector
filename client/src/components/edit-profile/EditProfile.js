@@ -16,7 +16,7 @@ class CreateProfile extends Component {
     handle: '',
     company: '',
     website: '',
-    locatoin: '',
+    location: '',
     status: '',
     skills: '',
     githubusername: '',
@@ -42,7 +42,6 @@ class CreateProfile extends Component {
 
     if(nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
-      console.log(profile)
 
       // Bring skills array back to CSV
       const skillsCSV = profile.skills.join(',');
@@ -50,7 +49,7 @@ class CreateProfile extends Component {
       // If profile field doesnt exist make empty string
       profile.company          = !isEmpty(profile.company) ? profile.company : '';
       profile.website          = !isEmpty(profile.website) ? profile.website : '';
-      profile.location         = !isEmpty(profile.location) ? profile.location : '';
+      profile.location = !isEmpty(profile.location) ? profile.location : '';
       profile.githubusername   = !isEmpty(profile.githubusername) ? profile.githubusername : '';
       profile.bio              = !isEmpty(profile.bio) ? profile.bio : '';
       profile.social           = !isEmpty(profile.social) ? profile.social : {};
@@ -66,15 +65,15 @@ class CreateProfile extends Component {
         website: profile.website,
         location: profile.location,
         status: profile.status,
+        skills: skillsCSV,
         githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
         facebook: profile.facebook,
         linkedin: profile.linkedin,
         youtube: profile.youtube,
-        instagram: profile.instagram,
-        skills: skillsCSV
-      })
+        instagram: profile.instagram
+      });
       
     }
   }
@@ -125,7 +124,7 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="LinkedIn Profile URL"
-          name="linkedIn"
+          name="linkedin"
           icon="fab fa-linkedin"
           value={this.state.linkedin}
           onChange={this.onChange}
@@ -143,7 +142,7 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="YouTube URL"
-          name="youTube"
+          name="youtube"
           icon="fab fa-youtube"
           value={this.state.youtube}
           onChange={this.onChange}
@@ -152,7 +151,7 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="Instagram Page URL"
-          name="YouTube"
+          name="instagram"
           icon="fab fa-instagram"
           value={this.state.instagram}
           onChange={this.onChange}
@@ -225,13 +224,13 @@ class CreateProfile extends Component {
                   info="Could be your own website or a company one"
                 />
 
-                <TextFieldGroup 
+                <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Los Angeles, CA)"
+                  info="City or city & state suggested (eg. Boston, MA)"
                 />
 
                 <TextFieldGroup 
@@ -289,7 +288,7 @@ CreateProfile.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,

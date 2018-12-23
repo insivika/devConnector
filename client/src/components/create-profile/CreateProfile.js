@@ -15,7 +15,7 @@ class CreateProfile extends Component {
     handle: '',
     company: '',
     website: '',
-    locatoin: '',
+    location: '',
     status: '',
     skills: '',
     githubusername: '',
@@ -70,7 +70,7 @@ class CreateProfile extends Component {
 
     if(displaySocialInputs){
       socialInputs = (
-        <djv>
+        <div>
         <InputGroup 
           placeholder="Twitter Profile URL"
           name="twitter"
@@ -82,7 +82,7 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="LinkedIn Profile URL"
-          name="linkedIn"
+          name="linkedin"
           icon="fab fa-linkedin"
           value={this.state.linkedin}
           onChange={this.onChange}
@@ -100,7 +100,7 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="YouTube URL"
-          name="youTube"
+          name="youtube"
           icon="fab fa-youtube"
           value={this.state.youtube}
           onChange={this.onChange}
@@ -109,14 +109,14 @@ class CreateProfile extends Component {
 
         <InputGroup 
           placeholder="Instagram Page URL"
-          name="YouTube"
+          name="instagram"
           icon="fab fa-instagram"
           value={this.state.instagram}
           onChange={this.onChange}
           error={errors.instagram}
         />
 
-        </djv>
+        </div>
       )
     } 
     
@@ -194,7 +194,7 @@ class CreateProfile extends Component {
                   value={this.state.skills}
                   onChange={this.onChange}
                   error={errors.skills}
-                  info="City or city & state suggested (eg. Los Angeles, CA)"
+                  info="List any skills that are relevant to your profession"
                 />
 
                 <TextFieldGroup 
