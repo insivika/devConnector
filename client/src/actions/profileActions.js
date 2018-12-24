@@ -78,7 +78,6 @@ export const addExperience = (expData, history) => dispatch => {
 }
 
 // Add Education
-
 export const addEducation = (eduData, history) => dispatch => {
     axios
       .post('/api/profile/education', eduData)
