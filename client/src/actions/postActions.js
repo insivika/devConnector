@@ -53,16 +53,16 @@ import {
 
   // Get post
   export const getPost = (id) => dispatch => {
-  dispatch(setPostLoading())
+  console.log(id)
+  dispatch(setPostLoading());
   axios
-    .get(`api/posts/${id}`)
+    .get(`/api/posts/${id}`)
     .then(res => {
       dispatch({
         type: GET_POST,
         payload: res.data
       })
     }
-
     )
     .catch(err => 
       dispatch({
