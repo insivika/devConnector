@@ -1,0 +1,29 @@
+.navbar{
+ position: relative;
+ z-index: 100;
+ background: none;
+}
+
+.navbar-brand{
+  width: 200px;
+}
+
+.navbar-collapse{
+  margin-top: 10px;
+}
+
+.nav-link{
+  font-weight: 500;
+  color: white !important;
+}
+
+@media (max-width: 575px) {
+  .navbar{
+    background: #171849 ;
+    text-align: center;
+  }
+
+  .navbar-brand{
+    width: 150px;
+  }
+}

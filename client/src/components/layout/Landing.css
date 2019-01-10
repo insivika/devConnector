@@ -1,0 +1,55 @@
+.landing {
+  position: relative;
+  background: url('../../img/hero.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -80px;
+  margin-bottom: -50px;
+}
+
+
+.hero-header{
+  text-shadow: #7801ff 5px 0px 50px
+}
+
+
+
+
+.hero-copy-wrapper{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.hero-copy{
+  font-size: 20px;
+}
+
+.sign-up-btn,
+.login-btn{
+  border: 1px white solid;
+  color: #8639EF;
+  font-weight: bold;
+  width: 200px;
+  background: rgb(255, 255, 255);
+  margin: 10px 20px 0px 0px;
+}
+
+.login-btn{
+  background: none;
+  color: white;
+}
+
+.sign-up-btn:hover{
+  background: rgba(255, 255, 255, 0.253);
+  color: white;
+
+}
+
+.login-btn:hover{
+  background: rgba(255, 255, 255, 0.835);
+  color: #8639EF;
+
+}

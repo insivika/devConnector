@@ -1,12 +1,43 @@
+@font-face {
+  font-family: 'Cereal';
+  src: url('./assets/Font_Cereal/AirbnbCereal-Book.ttf');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('./assets/Font_Cereal/AirbnbCereal-Medium.ttf');
+  font-weight: 500;
+}
+
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('./assets/Font_Cereal/AirbnbCereal-ExtraBold.ttf');
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('./assets/Font_Cereal/AirbnbCereal-Light.ttf');
+  font-weight: thin;
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Cereal", "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

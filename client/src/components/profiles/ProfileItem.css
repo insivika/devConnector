@@ -1,0 +1,26 @@
+.profile-item-row{
+  border: 1px solid #C802FE; 
+  color: #3A3A3A
+}
+
+.profile-item-wrapper {
+  border-radius: 0;
+  padding: 0;
+}
+
+.img-col{
+  padding: 0;
+  
+}
+
+.img-col img{
+  padding-left: 1px;
+}
+
+.card-body {
+  border: none;
+}
+
+.profile-item-row{
+  background: #ffffff;
+}
