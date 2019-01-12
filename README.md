@@ -1,2 +1,5 @@
-# HackConnect ![logo](https://user-images.githubusercontent.com/33808429/51067936-c50cb700-15cb-11e9-86e5-8dad547636c3.png)
+![logo](https://user-images.githubusercontent.com/33808429/51067949-f38a9200-15cb-11e9-92fb-6ec04726b44f.png)
+
+
+# HackConnect
 Social Network For Developers
