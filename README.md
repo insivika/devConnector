@@ -3,3 +3,17 @@
 
 # HackConnect
 Social Network For Developers
+
+## Motivation
+
+## Code style
+
+## Tech Stack
+
+## Features
+
+## Installation
+
+## API Reference
+
+## Tests
