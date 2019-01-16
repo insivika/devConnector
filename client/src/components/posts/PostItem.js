@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { deletePost, addLike, removeLike } from '../../actions/postActions'
 import { spawn } from 'child_process';
 
+import ('./PostItem.css')
+
 
 class PostItem extends Component {
 
@@ -38,15 +40,17 @@ class PostItem extends Component {
       <div className="card card-body mb-3">
       <div className="row">
         <div className="col-md-2">
-          <a href="profile.html">
+          {/* <Link to={`/post/${post._id}`}> */}
+          <a href="#">
             <img className="rounded-circle d-none d-md-block" src={post.avatar}
               alt="" />
           </a>
+          {/* </Link> */}
           <br />
           <p className="text-center">{post.name}</p>
         </div>
         <div className="col-md-10">
-            <p className="lead">
+            <p className="lead post-title">
               {post.text}
             </p>
               {showActions ? (<span>
@@ -61,7 +65,7 @@ class PostItem extends Component {
               <button onClick={() => this.onUnlikeClick(post._id)} type="button" className="btn btn-light mr-1">
               <i className="text-secondary fas fa-thumbs-down"></i>
               </button>
-                <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
+                <Link to={`/post/${post._id}`} className="btn btn-info mr-1 comment-btn">
                 Comments
                 </Link>
               {post.user === auth.user.id ? (

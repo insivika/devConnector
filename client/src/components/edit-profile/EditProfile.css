@@ -1,0 +1,20 @@
+
+.edit-profile-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.edit-profile-btn:hover{
+  background: rgb(110, 2, 139);
+}
+
+
+.edit-go-back {
+  border: 1px solid #C802FE;
+  color: white;
+}
+
+.edit-go-back:hover{
+  color: #C802FE;
+}

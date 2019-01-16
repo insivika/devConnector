@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions';
-import TextFieldGroup from '../common/TextFieldGroup'
+import TextFieldGroup from '../common/TextFieldGroup';
+
+import ('./Register.css')
 
 class Register extends Component {
 
@@ -98,7 +100,7 @@ class Register extends Component {
                           error={errors.password2}
                       />
 
-                  <input type="submit" className="btn btn-info btn-block mt-4" />
+                  <input type="submit" className="btn btn-info btn-block mt-4 register-btn" />
                 </form>
               </div>
             </div>

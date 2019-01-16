@@ -1,0 +1,17 @@
+
+.comment-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.comment-btn:hover{
+  background: rgb(110, 2, 139);
+}
+
+
+.post-title{
+  color: rgb(0, 0, 29);
+  font-weight: bold;
+  text-shadow: none;
+}

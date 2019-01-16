@@ -1,0 +1,24 @@
+.profile-text{
+  color: rgb(0, 0, 29) !important;
+  text-shadow: none;
+}
+
+.creds {
+  color: white !important;
+}
+
+.about{
+  color: rgb(0, 0, 29) !important;
+}
+
+.git-hub h3{
+  color: white  !important;
+}
+
+.git-hub h4 a{
+  color: rgb(0, 0, 29) !important;
+}
+
+.repo-item p {
+  color: rgb(9, 0, 48) !important;
+}

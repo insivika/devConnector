@@ -1,3 +1,7 @@
 .footer{
   background: #171849 !important;
+  height: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

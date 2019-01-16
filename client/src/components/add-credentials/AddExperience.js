@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addExperience } from '../../actions/profileActions'
 
-
+import ('./AddCreds.css')
  
 class AddExperience extends Component {
   state={
@@ -71,7 +71,7 @@ class AddExperience extends Component {
       <div className="add-experience">
         <div className="container">
           <div className="col-md-8 m-auto">
-            <Link to="/dashboard" className="btn btn-ligh">
+            <Link to="/dashboard" className="btn edit-go-back ">
               Go Back
             </Link>
             <h1 className="display-4 text-center">Add Your Experience</h1>
@@ -79,7 +79,7 @@ class AddExperience extends Component {
               Add any job or position that you have had in the past or current.
             </p>
             <small className="d-block pb-3">* = required fields</small>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className="create-profile-text">
               <TextFieldGroup 
                 placeholder="* Company"
                 name="company"
@@ -142,7 +142,7 @@ class AddExperience extends Component {
                 error={errors.description}
                 info="Tell us about the position"
               />
-              <input type="submit" value="Submit" onSubmit={this.onSubmit} className="btn btn-info btn-block mt-4"/>
+              <input type="submit" value="Submit" onSubmit={this.onSubmit} className="btn btn-info btn-block mt-4 edit-profile-btn"/>
             </form>
           </div>
         </div>

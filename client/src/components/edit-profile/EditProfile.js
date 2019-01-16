@@ -10,6 +10,8 @@ import { createProfile, getCurrentProfile } from '../../actions/profileActions';
 import isEmpty from '../../validation/is-empty'
 
 
+import ('./EditProfile.css')
+
 class CreateProfile extends Component {
   state = {
     displaySocialInputs: false,
@@ -180,13 +182,13 @@ class CreateProfile extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-ligh">
+              <Link to="/dashboard" className="btn btn-ligh edit-go-back">
                 Go Back
               </Link>
               <h1 className="display-4 text-center">Edit Your Profile</h1>
               <p className="lead text-center">Let's get some information to make profile stand out</p>
               <small className="d-block pb-3">* = required fields</small>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} className="create-profile-text">
                 <TextFieldGroup 
                   placeholder="* Profile Handle"
                   name="handle"
@@ -273,7 +275,7 @@ class CreateProfile extends Component {
                   <span className="text-muted">optional</span>
                 </div>
                 {socialInputs}
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4"/>
+                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4 edit-profile-btn"/>
               </form>
             </div>
           </div>

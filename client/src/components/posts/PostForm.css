@@ -1,0 +1,14 @@
+.card-header{
+  background: #C802FE !important; 
+}
+
+.submit-post-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.submit-post-btn:hover{
+  background: rgb(110, 2, 139);
+}
+

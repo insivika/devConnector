@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import ('./Profile.css')
+
 class ProfileGithub extends Component {
 
    myRef = React.createRef();
@@ -36,7 +38,7 @@ class ProfileGithub extends Component {
       <div key={repo.id} className="card card-body mb-2">
         <div className="row">
          
-          <div className="col-md-6">
+          <div className="col-md-6 repo-item">
             <h4>
               <Link to={repo.html_url} className="text-info" target="_blank">
                   {repo.name}
@@ -62,7 +64,7 @@ class ProfileGithub extends Component {
       </div>
     ))
     return (
-      <div ref={this.myRef}> 
+      <div ref={this.myRef} className="git-hub"> 
           <hr/>
           <h3 className="mb-4">Latest Github Repos</h3>
           {repoItems}

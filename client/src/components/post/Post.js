@@ -21,6 +21,7 @@ class Post extends Component {
     const {post, loading} = this.props.post;
     let postContent;
 
+
     if(post === null || loading || Object.keys(post).length === 0){
       postContent = <Spinner />
     } else {

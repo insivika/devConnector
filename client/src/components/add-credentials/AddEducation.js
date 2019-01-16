@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addEducation } from '../../actions/profileActions'
 
-
+import ('./AddCreds.css')
  
 class AddEducation extends Component {
   state={
@@ -69,7 +69,7 @@ class AddEducation extends Component {
       <div className="add-education">
         <div className="container">
           <div className="col-md-8 m-auto">
-            <Link to="/dashboard" className="btn btn-ligh">
+            <Link to="/dashboard" className="btn edit-go-back">
               Go Back
             </Link>
             <h1 className="display-4 text-center">Add Your Education</h1>
@@ -140,7 +140,7 @@ class AddEducation extends Component {
                 error={errors.description}
                 info="Tell us about the position"
               />
-              <input type="submit" value="Submit" onSubmit={this.onSubmit} className="btn btn-info btn-block mt-4"/>
+              <input type="submit" value="Submit" onSubmit={this.onSubmit} className="btn btn-info btn-block mt-4 edit-profile-btn"/>
             </form>
           </div>
         </div>

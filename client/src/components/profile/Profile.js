@@ -9,6 +9,8 @@ import ProfileGithub from './ProfileGithub';
 import Spinner from '../common/Spinner';
 import { getProfileByHandle } from '../../actions/profileActions';
 
+import ('./Profile.css')
+
 class Profile extends Component {
 
   componentDidMount() {
@@ -35,7 +37,7 @@ class Profile extends Component {
         <div>
           <div className="row">
             <div className="col-md-6">
-              <Link to="/profiles" className="btn btn-light mb-3 float-left">
+              <Link to="/profiles" className="btn mb-3 float-left edit-go-back">
                 Back to Profiles
               </Link>
             </div>

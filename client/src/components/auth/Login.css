@@ -2,3 +2,28 @@
   height: 750px;
   
 }
+
+body{
+  background: linear-gradient(rgb(0, 16, 85), rgb(199, 2, 254))
+}
+
+h1{
+  color: white;
+  text-shadow: #7801ff 5px 0px 50px
+}
+
+p{
+  color: white;
+  text-shadow: #7801ff 5px 0px 50px
+}
+
+.login-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.login-btn:hover{
+  background: rgb(110, 2, 139);
+}
+

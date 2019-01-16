@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { addPost } from '../../actions/postActions'
 
+import ('./PostForm.css')
 
 class PostForm extends Component {
 
@@ -66,7 +67,7 @@ class PostForm extends Component {
                   error={errors.text}
                 />
               </div>
-              <button type="submit" className="btn btn-dark">Submit</button>
+              <button type="submit" className="btn btn-dark submit-post-btn">Submit</button>
             </form>
           </div>
         </div>

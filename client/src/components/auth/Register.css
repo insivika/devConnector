@@ -1,0 +1,11 @@
+
+
+.register-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.register-btn:hover{
+  background: rgb(110, 2, 139);
+}

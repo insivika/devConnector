@@ -1,0 +1,19 @@
+
+.create-profile-text small{
+  color: white !important;
+}
+
+.create-profile-text span{
+  margin-left: 1em;
+  color: white !important;
+}
+
+.create-profile-btn{
+  background: rgba(0, 17, 255, 0.452);
+  border: none;
+  font-weight: bold;
+}
+
+.create-profile-btn:hover{
+  background: rgba(0, 5, 75, 0.452);
+}

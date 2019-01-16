@@ -8,6 +8,8 @@ import InputGroup from '../common/InputGroup';
 import SelectListGroup from '../common/SelectListGroup';
 import { createProfile } from '../../actions/profileActions';
 
+import ('./CreateProfile.css')
+
 
 class CreateProfile extends Component {
   state = {
@@ -141,7 +143,7 @@ class CreateProfile extends Component {
               <h1 className="display-4 text-center">Create Your Profile</h1>
               <p className="lead text-center">Let's get some information to make profile stand out</p>
               <small className="d-block pb-3">* = required fields</small>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={this.onSubmit} className="create-profile-text">
                 <TextFieldGroup 
                   placeholder="* Profile Handle"
                   name="handle"
@@ -225,10 +227,10 @@ class CreateProfile extends Component {
                   }} className="btn btn-light">
                     Add social network links
                   </button>
-                  <span className="text-muted">optional</span>
+                  <span className="text-muted create-profile-text">optional</span>
                 </div>
                 {socialInputs}
-                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4"/>
+                <input type="submit" value="Submit" className="btn btn-info btn-block mt-4 create-profile-btn"/>
               </form>
             </div>
           </div>

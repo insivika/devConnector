@@ -1,16 +1,32 @@
 .profile-item-row{
   border: 1px solid #C802FE; 
-  color: #3A3A3A
+  color: #3A3A3A;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .profile-item-wrapper {
   border-radius: 0;
-  padding: 0;
+  padding: 0px;
+}
+
+.view-profile-btn{
+  background: #C802FE;
+  font-weight: 500;
+  border: none;
+}
+
+.view-profile-btn:hover{
+  background: rgb(110, 2, 139);
 }
 
 .img-col{
   padding: 0;
   
+}
+
+.profile-text{
+  color: rgb(0, 0, 29);
 }
 
 .img-col img{
