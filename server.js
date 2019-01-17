@@ -37,7 +37,7 @@ app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 // // Serve static assets if in production
-// if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){
 
     app.use(express.static('client/build'))
 
@@ -45,7 +45,7 @@ app.use('/api/posts', posts);
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
 
-// }
+}
 
 const port = process.env.PORT || 5000;
 
