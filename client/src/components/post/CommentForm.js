@@ -54,7 +54,7 @@ class CommentForm extends Component {
       <div className="post-form mb-3">
         <div className="card card-info">
           <div className="card-header bg-info text-white">
-            Make a comment...
+            Post a comment...
           </div>
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
