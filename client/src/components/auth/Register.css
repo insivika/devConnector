@@ -9,3 +9,7 @@
 .register-btn:hover{
   background: rgb(110, 2, 139);
 }
+
+.register small{
+  color: white !important;
+}
