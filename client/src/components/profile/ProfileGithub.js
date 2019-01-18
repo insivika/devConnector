@@ -24,7 +24,7 @@ class ProfileGithub extends Component {
         .then(res => res.json())
         .then(data => {
 
-          if(this.myRef.current && data){
+          if(this.myRef.current && data.message !== "Not Found"){
             this.setState({repos: data})
           }
         })
