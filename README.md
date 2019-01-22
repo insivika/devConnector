@@ -39,6 +39,4 @@ When the user has signed up with the platform, he/she can create a profile by en
 
 ## Installation
 
-## API Reference
-
-## Tests
+To get the project installed locally, simply clone it here on github and run ```npm install```, then head into the client folder and also run ```npm install```. 
