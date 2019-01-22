@@ -14,21 +14,21 @@ To learn more about React routes, global state management via Redux, authenticat
 
 ## Tech Stack
 ### Client 
-React,
-Bootstrap,
-Redux,
-Passport,
-Webpack,
-Babel,
-Axios,
-Moment.js,
+* React
+* Bootstrap
+* Redux
+* Passport
+* Webpack
+* Babel
+* Axios
+* Moment.js
 
 
 ### Server
-Express
-Mongoose
-Passport
-Gravatar
+* Express
+* Mongoose
+* Passport
+* Gravatar
 
 ## Features
 
