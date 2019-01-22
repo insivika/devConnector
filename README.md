@@ -39,4 +39,7 @@ When the user has signed up with the platform, he/she can create a profile by en
 
 ## Installation
 
-To get the project installed locally, simply clone it here on github and run ```npm install```, then head into the client folder and also run ```npm install```. 
+If you'd like to play around with the app and install it locally, simply clone it here on github and run ```npm install``` from your terminal from the root of the project. Once all the dependencies have successfully installed you can run ```npm start``` to fire up the server.The app is currently linked up to mlab and I placed an file called sample.keys_dev.js so you can see what values the environment variable expects. Then move into the client folder and also run ```npm install```. You'll now be able to run ```npm start``` which will open the react dev server on your localhost port 3000.   
+
+
+
