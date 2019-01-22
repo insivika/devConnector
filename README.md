@@ -4,13 +4,34 @@
 # HackConnect
 Social Network For Developers
 
-## Motivation
 
-## Code style
+
+
+
+
+## Motivation
+To learn more about React routes, global state management via Redux, authentication using Passport and queries using Mongoose.
 
 ## Tech Stack
+### Client 
+React,
+Bootstrap,
+Redux,
+Passport,
+Webpack,
+Babel,
+Axios,
+Moment.js,
+
+
+### Server
+Express
+Mongoose
+Passport
+Gravatar
 
 ## Features
+
 
 ## Installation
 
